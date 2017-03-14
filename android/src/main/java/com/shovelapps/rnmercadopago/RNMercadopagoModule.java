@@ -75,6 +75,26 @@ public class RNMercadopagoModule extends ReactContextBaseJavaModule implements A
             }
      }
 
+     @ReactMethod
+      public void createToken(ReadableArray args, com.facebook.react.bridge.Callback success, com.facebook.react.bridge.Callback error) {
+             String action = "createToken";
+             try {
+                 this.execute(action, JsonConvert.reactToJSON(args), new CallbackContext(success, error));
+             } catch (Exception ex) {
+
+             }
+      }
+
+     @ReactMethod
+      public void getIdentificationTypes(ReadableArray args, com.facebook.react.bridge.Callback success, com.facebook.react.bridge.Callback error) {
+             String action = "getIdentificationTypes";
+             try {
+                 this.execute(action, JsonConvert.reactToJSON(args), new CallbackContext(success, error));
+             } catch (Exception ex) {
+
+             }
+      }
+
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
 

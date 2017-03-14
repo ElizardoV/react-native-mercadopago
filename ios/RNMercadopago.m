@@ -31,6 +31,8 @@
 @implementation RNMercadopago
 RCT_EXPORT_MODULE(RNMercadopago)
 RCT_EXPORT_CORDOVA_METHOD(startCheckout);
+RCT_EXPORT_CORDOVA_METHOD(createToken);
+RCT_EXPORT_CORDOVA_METHOD(getIdentificationTypes);
 
 - (void)setPaymentPreference:(CDVInvokedUrlCommand*)command
 {
